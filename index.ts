@@ -24,3 +24,9 @@ const reviews = [
         date: '27-03-2021'
     },
 ]
+
+//function accepting setting script to only accept numbers
+function showReviewTotal (value : number) {
+    reviewTotalDisplay.innerHTML = value.toString()
+}
+
