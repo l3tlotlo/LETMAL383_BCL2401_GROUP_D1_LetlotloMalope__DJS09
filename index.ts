@@ -27,6 +27,7 @@ const reviews = [
 
 //function accepting setting script to only accept numbers
 function showReviewTotal (value : number) {
-    reviewTotalDisplay.innerHTML = value.toString()
+    reviewTotalDisplay.innerHTML = 'review total ' + value.toString()
 }
 
+showReviewTotal(reviews.length)
