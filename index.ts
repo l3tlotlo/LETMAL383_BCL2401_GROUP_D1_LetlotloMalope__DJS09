@@ -1,6 +1,7 @@
 const reviewTotalDisplay: HTMLElement = document.querySelector('#reviews')!
 const returningUserDisplay: HTMLElement = document.querySelector('#returningUser')!
 const userNameDisplay: HTMLElement = document.querySelector('#userName')!
+let isOpen : boolean
 
 const reviews = [
     {
