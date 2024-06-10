@@ -1,0 +1,17 @@
+{
+  "name": "project",
+  "devDependencies": {
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5",
+    "webpack": "^5.91.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w"
+  },
+  "version": "1.0.0",
+  "description": "Are you ready to get stuck into some Typescript? For this challenge, you are required to code along with the lecturer from this lesson:  Couch Surfing Website",
+  "main": "webpack.config.js",
+  "author": "",
+  "license": "ISC"
+}
