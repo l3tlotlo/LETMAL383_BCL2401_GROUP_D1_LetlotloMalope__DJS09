@@ -1,7 +1,3 @@
-// Number Types mini-challenge 10 10.2
-// Write a function that will only accept numbers and attend to 
-// all TypeScript weakness flags.
-// : number
 const reviewTotalDisplay = document.querySelector('#reviews')
 
 const reviews = [
@@ -25,9 +21,10 @@ const reviews = [
     },
 ]
 
-//function accepting setting script to only accept numbers
+
 function showReviewTotal (value : number, reviewer: string) {
-    reviewTotalDisplay.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer
+    const iconDisplay = isLoyalty ? '⭐' : ''
+    reviewTotalDisplay.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer + 
 }
 
 showReviewTotal(reviews.length, reviews[0].name)
