@@ -1,5 +1,6 @@
 import { showReviewTotal, populateUser, showDetails, getTopTwoReviews} from './utils'
-import { Price, Country } from './types'
+import { Price, Country} from './types'
+import { Review } from './interfaces'
 const propertyContainer = document.querySelector('.properties')
 const reviewContainer = document.querySelector('.reviews')
 const container = document.querySelector('.container')
@@ -12,6 +13,7 @@ enum Permissions {
     ADMIN = 'ADMIN', 
     READ_ONLY = 'READ_ONLY'
 }
+
 enum LoyaltyUser {
     GOLD_USER = 'GOLD_USER',
     SILVER_USER = 'SILVER_USER',
@@ -19,12 +21,7 @@ enum LoyaltyUser {
 }
 
 // Reviews
-const reviews: { 
-    name: string; 
-    stars: number; 
-    loyaltyUser: LoyaltyUser; 
-    date: string; 
-    }[] = [
+const reviews: Review[] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -109,10 +106,12 @@ const properties : {
     }
 ]
 
+// Functions
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
 
+// Add the properties
 for (let i = 0; i < properties.length; i++) {
     const card = document.createElement('div')
     card.classList.add('card')
@@ -125,12 +124,7 @@ for (let i = 0; i < properties.length; i++) {
 }
 
 let count = 0
-function addReviews(array: {
-    name: string;
-    stars: number;
-    loyaltyUser: LoyaltyUser;
-    date: string;
-}[] ) : void {
+function addReviews(array: Review[]) : void {
     if (!count ) {
         count++
         const topTwo = getTopTwoReviews(array)
