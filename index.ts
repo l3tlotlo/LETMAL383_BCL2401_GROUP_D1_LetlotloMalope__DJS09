@@ -64,43 +64,43 @@ const properties : {
     };
 }[] = [
     {
-        image: '',
-        title: "Cottage",
-        price: 68,
+        image: 'images/colombia-property.jpg',
+        title: 'Colombian Shack',
+        price: 45,
         location: {
-            firstLine: "house 54",
-            city: "Gazalkent",
-            code: 54546,
-            country: "Uzbekistan"
+            firstLine: 'shack 37',
+            city: 'Bogota',
+            code: 45632,
+            country: 'Colombia'
         },
-        contact: "kinggheedorah@mfdoom.com",
-        isAvailable: false  
+        contact: 'marywinkle@gmail.com',
+        isAvailable: true  
     },
     {
-        image: '',
-        title: 'Log Cabin',
-        price: 54,
+        image: 'images/poland-property.jpg',
+        title: 'Polish Cottage',
+        price: 34,
         location: {
-            firstLine: "no 75",
-            city: "Far Far away",
-            code: 9818,
-            country: 'Ofmilkandhoney'
+            firstLine: 'no 23',
+            city: 'Gdansk',
+            code: 343903,
+            country: 'Poland'
         },
-        contact: 'Shrek@hotmail.com',
-        isAvailable: true
-    },
-        {
-        image: '',
-        title: "Igloo",
-        price: 565,
-        location: {
-            firstLine: 'no 01',
-            city: 'North Pole',
-            code: 3903,
-            country: "Antarctica"
-        },
-        contact: "stNick@northpole.com",
+        contact: 'garydavis@hotmail.com',
         isAvailable: false 
+    },
+    {
+        image: 'images/london-property.jpg',
+        title: 'London Flat',
+        price: 23,
+        location: {
+            firstLine: 'flat 15',
+            city: 'London',
+            code: 35433,
+            country: 'United Kingdom',
+        },
+        contact: 'andyluger@aol.com',
+        isAvailable: true
     }
 ]
 
