@@ -10,6 +10,24 @@ const footer = document.querySelector('.footer')
 
 let isLoggedIn: boolean
 
+enum Permissions {
+    ADMIN = 'ADMIN', 
+    READ_ONLY = 'READ_ONLY'
+}
+
+enum LoyaltyUser {
+    GOLD_USER = 'GOLD_USER',
+    SILVER_USER = 'SILVER_USER',
+    BRONZE_USER = 'BRONZE_USER'
+}
+
+interface Review {
+    name: string; 
+    stars: number; 
+    loyaltyUser: LoyaltyUser; 
+    date: string;   
+}
+
 // Reviews
 const reviews: Review[] = [
     {
@@ -42,19 +60,22 @@ const you = {
 }
 
 // Array of Properties
-const properties : {
+interface Property {
     image: string;
     title: string;
-    price: number;
+    price: Price;
     location: {
         firstLine: string;
         city: string;
-        code: number;
-        country: string;
-    };
-    contact: [ number, string ];
+        code: number | string;
+        country: Country
+    }
+    contact: [ number, string];
     isAvailable: boolean;
-}[] = [
+}
+
+// Array of Properties
+const properties : Property[] = [
     {
         image: 'images/colombia-property.jpg',
         title: 'Colombian Shack',
@@ -71,7 +92,7 @@ const properties : {
     {
         image: 'images/poland-property.jpg',
         title: 'Polish Cottage',
-        price: 34,
+        price: 30,
         location: {
             firstLine: 'no 23',
             city: 'Gdansk',
@@ -84,17 +105,31 @@ const properties : {
     {
         image: 'images/london-property.jpg',
         title: 'London Flat',
-        price: 23,
+        price: 25,
         location: {
             firstLine: 'flat 15',
             city: 'London',
-            code: 35433,
+            code: 'SW4 5XW',
             country: 'United Kingdom',
         },
         contact: [+34829374892553, 'andyluger@aol.com'],
         isAvailable: true
     }
+   {
+        image: 'images/malaysian-hotel.jpeg',
+        title: 'Malia Hotel',
+        price: 35,
+        location: {
+            firstLine: 'Room 4',
+            city: 'Malia',
+            code: 45334,
+            country: 'Malaysia'
+        },
+        contact: [ +60349822083, 'lee34@gmail.com'],
+        isAvailable: false
+    }
 ]
+
 
 // Functions
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
