@@ -136,7 +136,6 @@ showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
 
-// Add the properties
 for (let i = 0; i < properties.length; i++) {
     const card = document.createElement('div')
     card.classList.add('card')
@@ -147,7 +146,6 @@ for (let i = 0; i < properties.length; i++) {
     showDetails(you.permissions, card, properties[i].price)
     propertyContainer.appendChild(card)
 }
-
 let count = 0
 function addReviews(array: Review[]) : void {
     if (!count ) {
