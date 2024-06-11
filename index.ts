@@ -124,7 +124,6 @@ for (let i = 0; i < properties.length; i++) {
     propertyContainer.appendChild(card)
 }
 
-//Broken code
 let count = 0
 function addReviews(array: {
     name: string;
