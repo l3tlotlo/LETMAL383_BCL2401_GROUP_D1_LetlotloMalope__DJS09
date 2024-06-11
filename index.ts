@@ -1,6 +1,7 @@
 import { showReviewTotal, populateUser, showDetails, getTopTwoReviews} from './utils'
 import { Price, Country} from './types'
 import { Review } from './interfaces'
+import { Permissions , LoyaltyUser } from './enums'
 const propertyContainer = document.querySelector('.properties')
 const reviewContainer = document.querySelector('.reviews')
 const container = document.querySelector('.container')
@@ -8,17 +9,6 @@ const button = document.querySelector('button')
 const footer = document.querySelector('.footer')
 
 let isLoggedIn: boolean
-
-enum Permissions {
-    ADMIN = 'ADMIN', 
-    READ_ONLY = 'READ_ONLY'
-}
-
-enum LoyaltyUser {
-    GOLD_USER = 'GOLD_USER',
-    SILVER_USER = 'SILVER_USER',
-    BRONZE_USER = 'BRONZE_USER'
-}
 
 // Reviews
 const reviews: Review[] = [
