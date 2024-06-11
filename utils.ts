@@ -19,6 +19,12 @@ export function showDetails(value: boolean | Permissions, element : HTMLElement,
     if (value) {
         const priceDisplay = document.createElement('div')
         priceDisplay.innerHTML = price.toString() + '/night'
-        element.appendChild(priceDisplay)
+        element .appendChild(priceDisplay)
     }
+}
+
+export function makeMultiple(value: number) {
+    if (value > 1 || value == 0 ) {
+        return 's'
+    } else return ''
 }
