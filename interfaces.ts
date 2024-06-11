@@ -1,17 +1,14 @@
-enum LoyaltyUser {
-    GOLD_USER = 'GOLD_USER',
-    SILVER_USER = 'SILVER_USER',
-    BRONZE_USER = 'BRONZE_USER'
-}
+import { LoyaltyUser } from './enums'
+import { Price, Country } from './types'
 
 export interface Review {
-    name: string;
-    stars: number;
-    loyaltyUser: LoyaltyUser;
-    date: string;
+    name: string; 
+    stars: number; 
+    loyaltyUser: LoyaltyUser; 
+    date: string;   
 }
 
-interface Property {
+export interface Property {
     image: string;
     title: string;
     price: Price;
