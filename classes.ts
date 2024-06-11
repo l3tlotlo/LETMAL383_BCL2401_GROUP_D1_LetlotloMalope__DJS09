@@ -1,3 +1,5 @@
+import { Review } from './interfaces'
+
 export default class MainProperty {
     src: string
     title: string

@@ -7,7 +7,6 @@ export interface Review {
     loyaltyUser: LoyaltyUser; 
     date: string;   
 }
-
 export interface Property {
     image: string;
     title: string;
