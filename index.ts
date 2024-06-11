@@ -1,4 +1,7 @@
 import { showReviewTotal, populateUser } from './utils'
+import { Permissions } from './enums'
+const propertyContainer = document.querySelector('.properties')
+const footer = document.querySelector('.footer')
 let isOpen : boolean
 
 const reviews : {
@@ -28,17 +31,10 @@ const reviews : {
 ]
 
 
-showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
-
-const you: {
-    firstName: string;
-    lastName: string;
-    isReturning: boolean;
-    age: number;
-    stayedAt: string[]
-} = {
+const you = {
     firstName: 'Bobby',
     lastName: 'Brown',
+    permissions: Permissions.ADMIN,
     isReturning: true,
     age: 35,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
