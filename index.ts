@@ -2,11 +2,11 @@ import { showReviewTotal, populateUser, showDetails, getTopTwoReviews} from './u
 import { Permissions , LoyaltyUser } from './enums'
 import MainProperty from './classes' 
 import { Review, Property }  from './interfaces'
-const propertyContainer = document.querySelector('.properties')
-const reviewContainer = document.querySelector('.reviews')
-const container = document.querySelector('.container')
-const button = document.querySelector('button')
-const footer = document.querySelector('.footer')
+const propertyContainer = document.querySelector('.properties') as HTMLElement
+const reviewContainer = document.querySelector('.reviews')as HTMLElement
+const container = document.querySelector('.container') as HTMLElement
+const button = document.querySelector('button') as HTMLElement
+const footer = document.querySelector('.footer') as HTMLElement
 
 let isLoggedIn: boolean
 
@@ -80,7 +80,7 @@ const properties : Property[] = [
         },
         contact: [+34829374892553, 'andyluger@aol.com'],
         isAvailable: true
-    }
+    },
    {
         image: 'images/malaysian-hotel.jpeg',
         title: 'Malia Hotel',
@@ -142,7 +142,7 @@ let yourMainProperty = new MainProperty(
         date: '12-04-2021'
     }] )
 
-const mainImageContainer = document.querySelector('.main-image')
+const mainImageContainer = document.querySelector('.main-image') as HTMLElement
 const image = document.createElement('img')
 image.setAttribute('src', yourMainProperty.src)
 mainImageContainer.appendChild(image)
