@@ -1,6 +1,4 @@
-const reviewTotalDisplay: HTMLElement = document.querySelector('#reviews')!
-const returningUserDisplay: HTMLElement = document.querySelector('#returningUser')!
-const userNameDisplay: HTMLElement = document.querySelector('#userName')!
+import { showReviewTotal, populateUser } from './utils'
 let isOpen : boolean
 
 const reviews : {
@@ -29,10 +27,6 @@ const reviews : {
     },
 ]
 
-function showReviewTotal(value: number, reviewer: string, isLoyalty: boolean) {
-    const iconDisplay = isLoyalty ? '⭐' : ''
-    reviewTotalDisplay.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer + ' ' + iconDisplay
-}
 
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
@@ -104,11 +98,17 @@ const properties : {
     }
 ]
 
-function populateUser(isReturning: boolean, userName: string) {
-    if (isReturning) {
-        returningUserDisplay.innerHTML = 'back'
-    }
-    userNameDisplay.innerHTML = userName
-}
+// Functions
+showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
 
 populateUser(you.isReturning, you.firstName)
+//Properties added
+for (let i = 0; i < properties.length; i++) {
+    const card = document.createElement('div')
+    card.classList.add('card')
+    card.innerHTML = properties[i].title
+    const image = document.createElement('img')
+    image.setAttribute('src', properties[i].image)
+    card.appendChild(image)
+    propertyContainer.appendChild
+}
