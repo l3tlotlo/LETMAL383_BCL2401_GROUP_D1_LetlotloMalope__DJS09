@@ -1,5 +1,15 @@
-COUCH SURFING APP
-Used typescript, CSS, HTML and JS
-coded along with Scrimba videos
-Used provided starter code
+# 🚀 Welcome to your new awesome project!
 
+This project has been created using **webpack-cli**, you can now run
+
+```
+npm run build
+```
+
+or
+
+```
+yarn build
+```
+
+to bundle your application
